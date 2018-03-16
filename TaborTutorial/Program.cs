@@ -39,27 +39,31 @@ namespace TaborTutorial
                 Console.WriteLine($"Number in numbers array {number}.");
             }
             Console.WriteLine("Pick a number between 1 and 5: ");
-            int pickANumber = Convert.ToInt32(Console.ReadLine());
-
-            switch(pickANumber){
-                case 1:
-                    Console.WriteLine($"You picked the first number, {numbers[0]}");
-                    break;
-                case 2:
-                    Console.WriteLine($"You picked the second number, {numbers[1]}");
-                    break;
-                case 3:
-                    Console.WriteLine($"You picked the third number, {numbers[2]}");
-                    break;
-                case 4:
-                    Console.WriteLine($"You picked the fourth number, {numbers[3]}");
-                    break;
-                case 5:
-                    Console.WriteLine($"You picked the fifth number, {numbers[4]}");
-                    break;
-                default:
-                    Console.WriteLine("Read the directions and try again some other time!");
-                    break;
+            try{
+                int pickANumber = Convert.ToInt32(Console.ReadLine());
+                switch (pickANumber)
+                {
+                    case 1:
+                        Console.WriteLine($"You picked the first number, {numbers[0]}");
+                        break;
+                    case 2:
+                        Console.WriteLine($"You picked the second number, {numbers[1]}");
+                        break;
+                    case 3:
+                        Console.WriteLine($"You picked the third number, {numbers[2]}");
+                        break;
+                    case 4:
+                        Console.WriteLine($"You picked the fourth number, {numbers[3]}");
+                        break;
+                    case 5:
+                        Console.WriteLine($"You picked the fifth number, {numbers[4]}");
+                        break;
+                    default:
+                        Console.WriteLine("Read the directions and try again some other time!");
+                        break;
+                }
+            } catch(Exception e) {
+                Console.WriteLine("That's not quite what I'm asking for.");
             }
 
             char[] nameArray = name.ToCharArray();
